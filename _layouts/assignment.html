@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Test"
+summary: "Test Assignment"
+embed_path: ""
+---
+
+{{ content }}
+
+{% if page.embed_path %}
+
+<div class="embed-wrapper">
+  <embed
+    src="{{ page.embed_path }}"
+    width="500"
+    height="375"
+    type="application/pdf"
+  />
+</div>
+{% endif %}
+
+
