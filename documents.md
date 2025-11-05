@@ -10,7 +10,7 @@ permalink: /documents/
   {% assign sorted_by_title = site.documents | sort:'title' %}
   {% for document in site.documents %}
     <li>
-      <h2><a href="{{ document.url }}">{{ document.title }}</a></h2>
+      <h2><a href="{{ document.url | relative_url }}">{{ document.title }}</a></h2>
       <!-- <p>{{ assignment.summary }}</p> -->
       <!-- <small>{{ assignment.date | date: "%B %d, %Y" }}</small> -->
     </li>
