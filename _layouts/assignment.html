@@ -3,6 +3,7 @@ layout: default
 title: "Test"
 summary: "Test Assignment"
 embed_path: ""
+images:
 ---
 
 {{ content }}
@@ -18,5 +19,14 @@ embed_path: ""
   />
 </div>
 {% endif %}
+
+{% if page.images %} 
+    {% for image in page.images %}
+        <div class="image-wrapper">
+            <img src="{{ image.path | relative_url }}" alt="{{ image.alt }}" />
+        </div>
+    {% endfor %} 
+{% endif %}
+
 
 
